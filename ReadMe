@@ -1,0 +1,28 @@
+Virtual Memory Manager
+Overview
+This program simulates a virtual memory manager that translates virtual addresses into physical addresses using demand paging. It includes implementations of a TLB (Translation Lookaside Buffer) and page replacement algorithm.
+
+Features
+Address Translation: Translates virtual addresses into physical addresses.
+Page Fault Handling: Handles page faults by loading pages from the backing store into physical memory.
+TLB: Implements a TLB using a FIFO (First-In-First-Out) replacement policy.
+Statistics: Computes and displays statistics including page fault rate and TLB hit rate.
+Usage
+Compile the program.
+bash
+Copy code
+g++ main2.cpp -o main2
+Run the program with the name of the file containing virtual addresses as a command-line argument.
+bash
+Copy code
+./main2 addresses.txt
+Replace addresses.txt with the path to the file containing virtual addresses.
+Input Format
+The input file should contain virtual addresses separated by whitespace.
+Output
+The program outputs the virtual address, physical address, and value at that address for each translation.
+It also displays statistics including the number of translated addresses, page faults, page fault rate, TLB hits, and TLB hit rate.
+Dependencies
+C++ compiler with support for C++11 standard.
+Notes
+The program assumes a specific file format for the backing store (BACKING_STORE.bin), containing the data to be loaded into physical memory.
